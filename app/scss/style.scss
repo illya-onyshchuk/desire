@@ -738,6 +738,20 @@
 
 .inspiration {
   padding-top: 100px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 362px;
+    background: url(../images/inspiration-bg.jpg) no-repeat, top center;
+    background-size: cover;
+    z-index: -1;
+  }
+
   &__inner {
     display: flex;
     justify-content: center;
@@ -775,5 +789,27 @@
 
   &__text {
     margin-bottom: 30px;
+  }
+
+  &__item {
+    @extend %title-font;
+    color: $title;
+    line-height: 23px;
+    margin-bottom: 33px;
+  }
+
+  &__item-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #fff;
+    border-radius: 4px;
+  }
+
+  &__line {
+    height: 2px;
+    border-radius: 4px;
+    background-color: $title;
+    // margin-top: -2px;
   }
 }
