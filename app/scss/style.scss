@@ -280,6 +280,8 @@
 .breadcrumbs {
   background-color: rgba(#dfdfdf, 0.5);
   padding: 13px 14px;
+  position: relative;
+  z-index: 1000;
 
   &__list {
     display: flex;
@@ -836,4 +838,9 @@
   &__item {
     margin: 0 auto;
   }
+}
+
+.map {
+  margin-top: -53px;
+  margin-bottom: 50px;
 }
