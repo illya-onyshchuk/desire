@@ -992,7 +992,7 @@
     margin-bottom: 36px;
   }
 
-  &__category-titl,
+  &__category-title,
   &__tags-title {
     @extend %title-font;
     color: $title;
@@ -1100,6 +1100,19 @@
       border-radius: 1px;
       margin: 0 auto;
     }
+  }
+}
+
+.article-popup {
+  &__box {
+    position: relative;
+  }
+
+  .blog__item-popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
