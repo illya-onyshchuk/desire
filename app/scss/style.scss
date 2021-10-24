@@ -1213,7 +1213,8 @@
   }
 
   &__arrow--disabled {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
 
   &__list-num {
@@ -1228,3 +1229,29 @@
 }
 
 /* #endregion page Blog */
+
+/* #region blog-one */
+.blog-one__item {
+  p {
+    margin-bottom: 40px;
+  }
+
+  blockquote {
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    color: $title;
+    margin-bottom: 30px;
+    padding: 0 40px;
+  }
+
+  .blog__quote-author {
+    text-align: left;
+  }
+
+  .blog__quote-author::before {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+/* #endregion blog-one */
