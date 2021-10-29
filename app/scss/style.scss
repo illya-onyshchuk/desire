@@ -1286,6 +1286,7 @@
     padding: 40px 0 32px;
     border-top: 1px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 35px;
   }
 
   &__link {
@@ -1297,6 +1298,7 @@
 
     &::before {
       content: "";
+      position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 12px;
@@ -1306,17 +1308,135 @@
 
   &__links-prev {
     padding-left: 44px;
+
     &::before {
-      background-image: url();
+      background-image: url(../images/arrow-prev-recent.svg);
       left: 0;
     }
   }
   &__links-next {
     padding-right: 44px;
     text-align: right;
+
     &::before {
-      background-image: url();
+      background-image: url(../images/arrow-next-recent.svg);
       right: 0;
+    }
+  }
+
+  &__comments-title {
+    @extend %title-font;
+    color: $title;
+    font-size: 20px;
+    line-height: 31px;
+    margin-bottom: 15px;
+  }
+
+  &__comments-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  &__comments-avatar {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 13px;
+  }
+
+  &__comments-reply {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #707070;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  &__comments-name {
+    color: $title;
+    @extend %title-font;
+    line-height: 23px;
+  }
+
+  &__comments-data {
+    font-size: 14px;
+    color: #a1a1a1;
+    margin-bottom: 10px;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__form-title {
+    @extend %title-font;
+    color: $title;
+    line-height: 23px;
+    margin-bottom: 25px;
+  }
+
+  &__form-textarea {
+    min-height: 125px;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    border-radius: 24px;
+    padding: 14px 0 84px 17px;
+    resize: none;
+    margin-bottom: 12px;
+
+    &::placeholder {
+      color: #a1a1a1;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+
+  &__form-input {
+    border: 1px solid #dfdfdf;
+    border-radius: 20px;
+    padding: 6px 17px;
+    margin-bottom: 20px;
+    width: 48%;
+
+    &::placeholder {
+      color: #a1a1a1;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+
+  &__form-label {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #a1a1a1;
+  }
+
+  &__form-btn {
+    font-weight: 600;
+    background-color: $title;
+    border: none;
+    border-radius: 21px;
+    color: #fffff0;
+    padding: 6px 60px;
+    min-width: 181px;
+    cursor: pointer;
+    transition: all linear 0.3s;
+
+    &:hover {
+      transform: scale(0.97);
     }
   }
 }
