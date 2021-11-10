@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel, series }  = require('gulp');
+const { src, dest, watch, parallel, series}  = require('gulp');
 
 const scss          = require('gulp-sass');
 const concat        = require('gulp-concat');
@@ -7,6 +7,14 @@ const uglify        = require('gulp-uglify-es').default;
 const autoprefixer  = require('gulp-autoprefixer');
 const imagemin      = require('gulp-imagemin');
 const del           = require('del');
+const gulp          = require ('gulp');
+const ghPages       = require('gulp-gh-pages');
+
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 function browsersync() {
   browserSync.init({
