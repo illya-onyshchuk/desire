@@ -1,9 +1,0 @@
-node_modules
-/dist
-.publish
-/app
-.prettierignore
-gulpfile.js
-package-lock.json
-package.json
-README.md
